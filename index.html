@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>Home - Bass-ic Records</title>		
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<meta name="description" content="Bass-ic Record Label Homepage">
+		<meta name="keywords" content="Homepage, Irish music label">
+		<meta name="author" content="Bass-ic Record Label">
+		<meta charset="UTF-8" />
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.1.3/css/bootstrap.min.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/ionicons/2.0.1/css/ionicons.min.css">
+        <link rel="stylesheet" href="style.css"/>
+		<link rel="icon" href="images/favicon.ico">
+    </head>
+
+    <body>
+        <!--POP-UP for email list builder-->
+        <!-- This homepage pop-up used to build an email subscriber list is based on a template 
+        from Polyglot Developer: we had to edit the code in our script.js file to allow for the fact that we aren't sending the 
+        form data anywhere in reality. See our script.js file for more on this.-->
+        <div id="list-builder"></div>
+        <div id="popup-box">
+            <div id="popup-box-content">
+                <img src="images/close.png" class="popup-close" alt="closing icon"/>
+                <h2>Subscribe to the <br/>Bass-ic Records newsletter</h2>
+                <p>
+                    Stay up to date on the latest upcoming shows from your <br/>favourite artists 
+                    by subscribing to our newsletter.
+                </p>
+                <form id="popup-form">
+                    <input type="hidden" name="list" value="key_list_etc" />
+                    <input type="text" id="popup-name" placeholder="Name" />
+                    <input type="text" id="popup-email" placeholder="Email" />
+                    <input id="submitButton" name="subscribe" type="submit" value="Subscribe" />
+                </form>
+            </div>
+        </div>
+        <!--Actual HOMEPAGE-->
+        <div class="container">
+			<!--Nav bar that looks the same on all pages, Daniel Morrissey 21118701-->
+			<nav class="nav-container">
+				<a href="" class="logo-image-link"><img src="images/logo250x250.webp" height="250" width = "250" id="logo" alt="Bass-ic Records logo"/></a>
+				<a class="nav" href="">Home</a>
+				<a class="nav" href="recommendations/">Recommendations</a>
+				<a class="nav" href="gigs/">Gigs</a>
+				<a class="nav" href="contact/">Contact</a>
+			</nav>
+            <div class="row">
+            <!--Intro text on homepage, Colum Kavanagh-->
+                <br/>
+                <div class = "col">
+                    <h1>Bass-ic Records is Ireland's newest fake music label representating some of the country's best talent.</h1>
+                </div>
+            </div>
+            <br/>
+            <div class="row">
+                <div class = "col-md-12">
+                    <h2>What is Bass-ic Records?</h2>
+                    <p>Bass-ic Records is a fictional music label devised for a college project. (Nothing on this website is true!) With a fictional roster that includes some of the 
+                        globes finest talent across all genres, Bass-ic Records is unbeatable. Founded in 2021 by Daniel, Colum & Ciara – all avid music fans. <br/> <br/> 
+                        Some of the artists on our fictional label include Rise Against, Green Day, Metallica, Taylor Swift, Pink, 
+                        Justin Bieber, Rihanna, Beyonce, Drake, Johnny Cash, John Denver and Steve Earle, amongst many others.
+                    </p>
+                    <h2>How to use this website?</h2>
+                    <p>Want to get to know our signed artists a little better? Go to our ‘Recommendations’ page to search our roster either by Genre or Similar Artist. <br/><br/>
+                        Want to see any of our artists past performances? Head over to our ‘Gigs’ page to search your favourite artist and where they previously performed on recent tours. <br/><br/>
+                        If you are a new artist interested in sending us your demo, or just have any questions for our team please fill in your details on our “Contact Us” page and a member of the team will come back to you.<br/>
+                    </p>
+                </div>
+            </div>
+            
+            <!-- Slideshow: This is a 'Carousel' template from the Bootstrap documentation that I have adjusted to suit our needs 
+                by changing the timings using raw JavaScript, adjusting colours and fonts in our CSS file along with what captions it shows when used on smaller screens. -->
+            
+            <div hidden id="bass-icCarousel" class="carousel carousel-dark slide" data-bs-ride="carousel">
+                <div class="carousel-indicators">
+                  <button type="button" data-bs-target="#bass-icCarousel" data-bs-slide-to="0" class="active slide-indicator" aria-current="true" aria-label="Slide 1"></button>
+                  <button type="button" data-bs-target="#bass-icCarousel" data-bs-slide-to="1" aria-label="Slide 2" class="slide-indicator"></button>
+                  <button type="button" data-bs-target="#bass-icCarousel" data-bs-slide-to="2" aria-label="Slide 3" class="slide-indicator"></button>
+                  <button type="button" data-bs-target="#bass-icCarousel" data-bs-slide-to="3" aria-label="Slide 4" class="slide-indicator"></button>
+                </div>
+                <div class="carousel-inner">
+                    <div class="carousel-item" id="slide1">
+                        <img src="images/beyonce.webp" class="d-block w-100 slider-image" alt="Image of Beyonce.">
+                        <div class="carousel-caption d-md-block">
+                            <h5 class = "slide-text slide-title">Beyonce</h5>
+                            <p class="d-none d-md-block slide-text">Put your hands up for Beyonce!</p>
+                        </div>
+                    </div>
+                    <div class="carousel-item" id="slide2">
+                        <img src="images/pink.webp" class="d-block w-100 slider-image" data-bs-interval="100" alt="Image of Pink.">
+                        <div class="carousel-caption d-md-block">
+                            <h5 class = "slide-text slide-title">Pink</h5>
+                            <p class="d-none d-md-block slide-text">The spectacular Pink!</p>
+                        </div>
+                    </div>
+                    <div class="carousel-item active" id="slide3">
+                        <img src="images/metallica.webp" class="d-block w-100 slider-image" alt="Image of the Metallica.">
+                        <div class="carousel-caption d-md-block">
+                            <h5 class = "slide-text slide-title">Metallica</h5>
+                            <p class="d-none d-md-block slide-text">Rock out with Metallica!</p>
+                        </div>
+                    </div>
+                    <div class="carousel-item" id="slide4">
+                        <img src="images/rihanna.webp" class="d-block w-100 slider-image" data-bs-interval="100" alt="Image of Rihanna.">
+                        <div class="carousel-caption d-md-block">
+                        <h5 class = "slide-text slide-title">Rhihanna</h5>
+                        <p class="d-none d-md-block slide-text">From the shores of beautiful Barbados, it's Rihanna!</p>
+                        </div>
+                    </div>
+                </div>
+                <button class="carousel-control-prev slide-button" type="button" data-bs-target="#bass-icCarousel" data-bs-slide="prev">
+                  <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                  <span class="visually-hidden">Previous</span>
+                </button>
+                <button class="carousel-control-next slide-button" type="button" data-bs-target="#bass-icCarousel" data-bs-slide="next">
+                  <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                  <span class="visually-hidden">Next</span>
+                </button>
+              </div>
+            
+   
+              <div class="row">
+                <div class = "col-md-12 button-div">
+                    <button id="slideshowButton" onclick="toggleSlideshow();">View Slideshow</button>
+                </div>
+            </div>
+            <br/>
+            <div class="row">
+                <div class = "col-md-12">
+                    <h2>Tell us what you want to hear</h2>
+                    <p> If there’s an act out there you think we need to know about let us know. 
+                        We’re always on the look-out for incredible new talent to take to the next level.
+                    </p>  
+                </div>
+            </div>       
+            <br/> 
+
+		<!-- Bootstrap Footer - Ciara O'Malley - Template from https://bbbootstrap.com -->
+        <div class="footer-dark">
+            <footer>
+                <div class="container">
+                    <div class="row">
+                        <div class="col-sm-6 col-md-3 item">
+                            <img src="images/logo250x250.webp" class="logo" alt="Logo" />
+                        </div>
+                        <div class="col-sm-6 col-md-3 item">
+                            <h3>Tools</h3>
+                            <ul>
+                                <li><a href="recommendations/">Recommendations</a></li>
+                                <li><a href="gigs/">Gigs</a></li>
+                            </ul>
+                        </div>
+                        <div class="col-sm-6 col-md-3 item">
+                            <h3>About</h3>
+                            <ul>
+                                <li><a href="">Home</a></li>
+                                <li><a href="contact/">Contact Us</a></li>
+                            </ul>
+                        </div>
+
+                        <div class="col item social"><a href="https://www.facebook.com" target="_blank"><i class="icon ion-social-facebook"></i></a><a href="https://twitter.com" target="_blank"><i class="icon ion-social-twitter"></i></a><a href="https://www.snapchat.com" target="_blank"><i class="icon ion-social-snapchat"></i></a><a href="https://www.instagram.com" target="_blank"><i class="icon ion-social-instagram"></i></a></div>
+                    </div>
+                    <p class="copyright">Bass-ic Music Label <span id="currentYear"></span></p>
+                </div>
+            </footer>
+            </div>
+    </div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.1.3/js/bootstrap.bundle.min.js"></script>
+    <script src="script.js"></script>
+    </body>
+
+</html>
